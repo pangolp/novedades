@@ -9,16 +9,26 @@ Por ejemplo, "modules" o "apps"
 $ git clone https://github.com/pangolp/novedades.git
 ```
 
+### Requerimientos
+
+```
+Django==2.2.1
+django-ckeditor==5.7.1
+django-crispy-forms==1.7.2
+django-js-asset==1.2.2
+pytz==2019.1
+sqlparse==0.3.0
+```
+
 ### Agregamos el modulo en el settings.py
 
 ```python
-
 INSTALLED_APPS = [
 	...
-	'novedades'
+	'novedades',
+	'ckeditor',
 	...
 ]
-
 ```
 
 ### Recomendamos dividir INSTALLED_APPS en 3:

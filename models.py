@@ -8,6 +8,7 @@ class Categoria(models.Model):
 	# Sirve para crear categorías de forma dinámica
 	nombre = models.CharField(max_length=255, help_text='nombre de la categoria')
 	orden = models.PositiveSmallIntegerField(help_text='estable la prioridad con la que se ordena')
+	activo = models.BooleanField(default=True)
 
 	def __str__(self):
 		return self.nombre
@@ -21,6 +22,7 @@ class Novedad(models.Model):
 		unique=True
 	)
 	cuerpo = RichTextField()
+	activo = models.BooleanField(default=True)
 	dueño = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
 	creación = models.DateTimeField(auto_now_add=True)
 	modificación = models.DateTimeField(auto_now=True)
