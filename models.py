@@ -34,7 +34,7 @@ class Novedad(models.Model):
 
 	def save(self):
 		self.slug = slugify(self.titulo)
-		return super(self, Novedad).save()
+		super(Novedad, self).save(*args, **kwargs)
 
 	def __str__(self):
 		return self.titulo
