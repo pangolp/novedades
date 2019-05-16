@@ -14,3 +14,7 @@ class NovedadAdmin(admin.ModelAdmin):
 	list_display = ('titulo', 'cuerpo', 'activo', 'dueño', 'creación', 'modificación', 'slug', 'categoría')
 	search_fields = ['titulo', 'dueño', 'categoría']
 	list_filter = ('activo',)
+
+	def save_model(self, request, obj, form, change):
+		obj.dueño = request.user
+		super().save_model(request, obj, form, change)
