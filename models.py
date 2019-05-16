@@ -32,7 +32,7 @@ class Novedad(models.Model):
 	class Meta:
 		verbose_name_plural = 'novedades'
 
-	def save(self):
+	def save(self, *args, **kwargs):
 		self.slug = slugify(self.titulo)
 		super(Novedad, self).save(*args, **kwargs)
 
@@ -41,3 +41,5 @@ class Novedad(models.Model):
 
 	def getDueño(self):
 		return '%s, %s' % (self.dueño.last_name, self.dueño.first_name)
+
+
