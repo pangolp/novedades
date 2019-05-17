@@ -3,7 +3,7 @@
 ### Instalación:
 
 Clonar el repositorio, recomendamos tener un directorio de aplicaciones.
-Por ejemplo, "modules" o "apps"
+* Por ejemplo, "modules" o "apps"
 
 ```sh
 $ git clone https://github.com/pangolp/novedades.git
@@ -12,12 +12,9 @@ $ git clone https://github.com/pangolp/novedades.git
 ### Requerimientos
 
 ```
-Django==2.2.1
 django-ckeditor==5.7.1
 django-crispy-forms==1.7.2
 django-js-asset==1.2.2
-pytz==2019.1
-sqlparse==0.3.0
 ```
 
 ### Agregamos el modulo en el settings.py
